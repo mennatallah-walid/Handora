@@ -23,7 +23,7 @@ a {
   background-color: #c9a45c;
   position: fixed;
   left: 0.5%;
-  top: 15px;
+  top: 10px;
   z-index: 3;
   border-radius: 10px;
 }
@@ -36,9 +36,10 @@ a {
   position: relative;
   width: 200px;
   height: 30px;
-  margin: 7px 0 0 230px;
+  margin: 7px 0 0 220px;
 }
 .search-box input {
+  background-color: #fbfcf9e2;
   position: absolute;
   top: 8px;
   width: 100%;
