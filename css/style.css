@@ -1,0 +1,813 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  background: fixed no-repeat center #fbfcf9;
+  background-size: cover;
+  height: 1000px;
+}
+body::selection {
+  background-color: #e4d0ae;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  height: 55px;
+  width: 99%;
+  background-color: #c9a45c;
+  position: fixed;
+  left: 0.5%;
+  top: 15px;
+  z-index: 3;
+  border-radius: 10px;
+}
+.header img {
+  position: absolute;
+  left: 70px;
+  top: 5px;
+}
+.search-box {
+  position: relative;
+  width: 200px;
+  height: 30px;
+  margin: 7px 0 0 230px;
+}
+.search-box input {
+  position: absolute;
+  top: 8px;
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+  direction: rtl;
+  padding: 15px;
+}
+.search-box input:focus , .letsCreatTogether input {
+  outline: none;
+}
+.search-box i {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1;
+}
+.header ul {
+  position: absolute;
+  top: 18px;
+  right: 100px;
+  font-size: 0;
+}
+.header li {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 16px;
+  font-family: cursive;
+}
+.header a {
+  color: rgb(28, 27, 27);
+}
+.header > ul > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  background-color: #f6e5c9f9;
+  width: 0;
+  height: 2.3px;
+}
+.header a:hover::after {
+  width: 100%;
+  transition: 0.75s;
+}
+.categories {
+  position: relative;
+  padding-bottom: 15px;
+}
+.dropdown {
+  position: absolute;
+  top: 30px !important;
+  left: -10;
+  text-align: center;
+  width: 130px;
+  padding: 20px 0 0 0;
+  background-color: #fff;
+  border-radius: 8px;
+  display: none;
+}
+.dropdown li {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.dropdown li a {
+  transition: 0.3s;
+  color: #5f605d;
+}
+.categories:hover .dropdown {
+  display: block;
+}
+.dropdown a:hover  {
+  color: #c9a45c;
+}
+.hero-img {
+  height: 100vh;
+  background: url(../photos/hero1.png) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-text , .LittleTreasures-cards-overlay>div , .NewPieces-cards-overlay h3 , .BrowseMagic-cards-overlay h3 , .achievements-icons , .makers-cards , .comments-cards{
+  width: 55%;
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.hero-text h2 {
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-family: "Sansation", sans-serif;
+  letter-spacing: 6px;
+}
+.hero-text p {
+  width: 600px;
+  margin: auto;
+  font-family: "Sansation", sans-serif;
+  color: rgb(139, 139, 139);
+  line-height: 25px;
+}
+.hero-text button , .makers-section> button , .WorkHours button {
+  width: 240px;
+  height: 40px;
+  background-color: #c9a45c;
+  border-radius: 10px;
+  margin-left: 25px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+.hero-text button:hover , .makers-section>button:hover , .WorkHours button:hover{
+  color: rgb(232, 232, 232);
+  cursor: pointer;
+  background-color: #c9a55ce0;
+}
+
+/*/////////////////////////////////////////////////////////////*/
+
+.whyHandora {
+  z-index: -2;
+  height: 740px;
+  position: relative;
+  text-align: center;
+  background: url(../photos/BG\ whyHandora.png) no-repeat;
+  background-size: cover;
+}
+.whyHandora h2, .LittleTreasures h2 , .NewPieces h2 , .BrowseMagic h2 , .story h2 , .makers h2 , .contact h2{
+  padding-top: 180px;
+  font:
+    bold 35px "Sansation",
+    sans-serif;
+  word-spacing: 5px;
+}
+.underline {
+  margin: auto;
+  width: 200px;
+  height: 2px;
+  background-color: #c9a55ce0;
+}
+.whyHandora-cards {
+  width: fit-content;
+  height: 300px;
+  margin: auto;
+  margin-top: 70px;
+}
+.whyHandora-cards>div {
+  position: relative;
+  float: left;
+  width: 350px;
+  height: 300px;
+  border: 1px solid rgb(201, 195, 195);
+  border-radius: 15px;
+}
+.whyHandora-middleCard, .NewPieces-middleCard {
+  margin: 0 50px;
+}
+.whyHandora-cards i {
+  transition: 0.5s;
+  font-size: 25px;
+  margin: 40px 0 25px 0;
+  color: rgb(98, 86, 40);
+}
+.whyHandora-cards div:hover i , .footer-icons i:hover{
+  transform: translateY(-5px) scale(1.03);
+}
+.whyHandora-cards h3 , .LittleTreasures-cards-overlay h3 , .contact h3 {
+  margin-bottom: 20px;
+  word-spacing: 3px;
+  font:
+    normal 20px "Sansation",
+    sans-serif;
+}
+.whyHandora-cards p , .story-caption , .BrowseMagic-cards p , .letsCreatTogether p{
+  padding: 0 45px;
+  font: normal 14px/25px cursive;
+  margin-bottom: 30px;
+  color: #585a57e5;
+}
+.whyHandora-cards a {
+  color: rgb(98, 86, 40);
+  font-weight: bold;
+}
+.whyHandora-cards a:hover {
+  color: #fbfcf9;
+}
+.whyHandora-cards div::after , .makers-cards>div::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: rgba(201, 164, 92, 1);
+  width: 0;
+  height: 0;
+  border-radius: 15px;
+  z-index: -1;
+  transition: 0.75s;
+}
+.whyHandora-cards div:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+/* ////////////////////////////////// */
+
+.LittleTreasures{
+  text-align: center;
+  height: 800px;
+}
+.LittleTreasures .underline , .BrowseMagic .underline{
+  height: 2.5px;
+}
+.LittleTreasures h2 , .NewPieces h2 , .BrowseMagic h2 , .contact h2 {
+  padding-top: 80px ;
+}
+.LittleTreasures-section , .NewPieces-section , .BrowseMagic-section , .makers-section{
+  margin: auto;
+  background-color: #f5ebd695;
+  width: 90%;
+  height: 560px;
+  border-radius: 10px;
+
+}
+.LittleTreasures-cards ,.NewPieces-cards , .BrowseMagic-cards , .makers-cards {
+  padding-top: 10px;
+  margin: 30 auto;
+  height: 550px;
+  width:fit-content;
+}
+.LittleTreasures-cards>div , .makers-cards>div{
+  height: 250PX;
+  width: 250PX;
+  margin: 10px 22px;
+  float: left;
+  position: relative;
+}
+.LittleTreasures-cards img{
+  width: 250px;
+  border-radius: 10px;
+}
+.LittleTreasures-cards-overlay , .NewPieces-cards-overlay , .BrowseMagic-cards-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: 10px;
+  background-color: rgba(181, 126, 50, 0.652); 
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+}
+.LittleTreasures-cards-overlay>div {
+  width: 80%;
+}
+.LittleTreasures-cards-overlay p {
+  font: normal 12px cursive ;
+}
+.LittleTreasures-cards-overlay h3{
+  color: rgb(0, 0, 0); 
+  font:bold 24px "Sansation", sans-serif;
+}
+.LittleTreasures-cards>div:hover .LittleTreasures-cards-overlay{
+  visibility: visible;
+  opacity: 1;
+}
+.LittleTreasures-cards-overlay button{
+  margin-left: 5px;
+  margin-top: 15px;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.LittleTreasures-btn2{
+  color: black;
+}
+.LittleTreasures-cards-overlay i{
+  font-size: 24px; 
+}
+.LittleTreasures-btn1:hover i{
+  transform: translateY(-2px) scale(1.03);
+  font-weight: 900;
+  color:rgba(72, 2, 2, 0.981) ;
+}
+.LittleTreasures-btn2:hover {
+  transform: translateY(-2px) scale(1.03);
+  color:rgba(215, 193, 193, 0.981);
+}
+
+/* ////////////////////////////////// */
+
+.NewPieces , .makers{
+  text-align: center;
+  height: 735px;
+}
+.NewPieces .underline , .makers .underline{
+  height: 2.5px;
+}
+.NewPieces-section , .makers-section{
+  height: 550px;
+  width: 90%;
+  background-color: #718d720f;
+}
+.NewPieces-cards {
+padding-top: 30px;
+height: 525;
+}
+.NewPieces-cards>div{
+  float: left;
+  width: 370px;
+  position: relative;
+}
+.NewPieces-cards img{
+  border-radius: 5px;
+  width: 100%;
+}
+.NewPieces-cards-overlay , .BrowseMagic-cards-overlay{
+  border-radius: 0;
+  background-color:rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: .65s;
+}
+.NewPieces-cards-overlay h3 , .BrowseMagic-cards-overlay h3{
+  top: 50%;
+  width: 80% ;
+  font: bold 28px  "Sansation", sans-serif ;
+  color: #fff;
+}
+.NewPieces-cards>div:hover .NewPieces-cards-overlay , .BrowseMagic-uppercards>div:hover .BrowseMagic-cards-overlay , .BrowseMagic-lowercards>div:hover .BrowseMagic-cards-overlay{
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* /////////////////////////////////////////////////// */
+
+.BrowseMagic{
+  text-align: center;
+  height: 800px;
+}
+.BrowseMagic-section{
+  height: 570px;
+}
+.BrowseMagic-cards{
+  position: relative;
+}
+.BrowseMagic-uppercards>div , .BrowseMagic-lowercards>div{
+  position: relative;
+  border-radius: 50%;
+  float: left;
+  margin: 10 60px;
+}
+.BrowseMagic-cards img{
+  transition: 0.3s;
+  border-radius: 50%;
+  width: 280px;
+}
+.BrowseMagic-uppercards>div:hover img , .BrowseMagic-lowercards>div:hover img , .achievements-icons div:hover , .story-rightSide:hover {
+  transform: translateY(-5px);
+}
+.BrowseMagic-uppercards{
+  width: fit-content;
+  height: 300px;
+}
+.BrowseMagic-lowercards{
+  position: absolute;
+  left: 200px;
+  top: 260px;
+  margin: auto;
+  height: 300px;
+  width: fit-content;
+}
+.BrowseMagic-cards-overlay{
+  visibility: visible;
+  opacity: 1;
+  border-radius: 50%;
+  transition: .5s;
+}
+.BrowseMagic-uppercards>div:hover .BrowseMagic-cards-overlay , .BrowseMagic-lowercards>div:hover .BrowseMagic-cards-overlay{
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* /////////////////////////////////// */
+
+.achievements-upper , .achievements-lower , .comments-upper , .comments-lower{
+  height: 24.5%;
+  background-color: #fbfcf9;
+}
+.achievements-lower , .comments-lower{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.achievements , .comments , .contact{
+  height: 700px;
+  background: url(../photos/BG\ achievement.png) fixed no-repeat ;
+  background-size: cover;
+  position: relative;
+}
+.achievements-icons , .comments-cards{
+  top:50% ;
+  width: 56%;
+}
+.achievements-icons div , .comments-cards>div{
+  float: left;
+  padding: 30px 40px;
+  transition: 0.3s;
+}
+.achievements-icons i{
+  font-size: 35px;
+  color:#b6934b;
+  margin-bottom: 10px;
+}
+.achievements-icons p {
+  font:
+    normal 18px "Sansation",
+    sans-serif;
+  color: #f5ebd6cb;
+  margin-top: 5px;
+}
+
+/* //////////////////////////////////// */
+
+.story{
+  height: 800px;
+  position: relative;
+}
+.story>div{
+  float: left;
+}
+.story-leftSide{
+  border-radius: 10px;
+  position: absolute;
+  top: 16%;
+  bottom: 20%;
+  background-color: #a3aea319;
+  width: 80%;
+  height: 85%
+}
+.story-rightSide{
+  transition: 0.3s;
+  height: 500px;
+  width: 29%;
+  position: absolute;
+  right: 8%;
+  top: 27.5%;
+  background: url(../photos/BG\ ourStory3.jpg) no-repeat ;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.story h2{
+  padding: 95px 0 15px 150px;
+}
+.story-pra , .comments-cards p{
+  margin-bottom: 25px;
+  margin-left: 170px;
+  width: 500px;
+  font: normal 15px cursive;
+  color: #0000009d;
+  transition: 0.2s;
+}
+.story-pra:hover , .comments-cards>div:hover {
+  transform: translateY(-5px) ;
+}
+.story-caption{
+  color: rgba(98, 86, 40, 0.784);
+  margin-left: 160px;
+  padding-bottom: 30px;
+  font-size: 14px;
+  font-style: italic;
+}
+.story span{
+  margin-left:-20px;
+  color: rgb(98, 86, 40);
+  font: bold 17px/30px cursive;
+}
+.story-rightSide>div{
+  margin: 470 auto;
+  width: fit-content;
+}
+.story-rightSide i{
+  color: #eee;
+  margin-left: 20px;
+  left: 200px;
+  font-size: 13px;
+}
+.story-rightSide i:hover {
+  color:#b6934b;
+  cursor: pointer;
+}
+
+/* /////////////////////////////////////////////////// */
+
+
+ .makers{
+  height: 900px;
+ }
+.makers-section{
+  margin-top: 30px;
+  position: relative;
+  background-color: #e4d0ae31;
+}
+.makers-cards{
+  height: 80%;
+  padding: 0;
+  top: 40%;
+  width: 90%;
+}
+.makers-cards>div{
+  position: relative;
+  border-radius: 10px;
+  width: 250px;
+  margin: 0 28px;
+  height: 100%;
+  background-color: #ffffffad;
+}
+.makers-img{
+  margin:10px  auto;
+  width: 210px;
+  height: 215px;
+  border-radius: 95px 150px 60px 120px ;
+}
+.makers-img img{
+  margin-top: 5px;
+  width: 200;
+  border-radius: 85px 40px 60px 50px;
+}
+.makers-cards i{
+  font-size: 16px;
+}
+.makers-img i{
+  position: absolute;
+  top: 35px;
+  right: 45px;
+  font-size: 23px;
+  background-color: #c9a45c;
+  border-radius: 4.5px;
+  cursor: pointer;
+}
+ .makers-cards h3  , .comments-cards h3{
+  margin-top: 20px;
+  font: 800 20px/30px "Gveret Levin", cursive;
+  word-spacing: 3px;
+  letter-spacing: 2px;
+  color: rgb(98, 86, 40);
+
+ }
+.makers-cards p{
+  margin: auto;
+  width: 220px;
+  font: normal 13px cursive;
+  color: #0c0c0c77;
+}
+.makers-cards .pra{
+  font-size: bold;
+  margin:5px 0 15px 5px;
+  color: rgba(0, 0, 0, 0.697);
+}
+.makers-cards button{
+  margin:30px 20px ;
+  background:none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.makers-section>button{
+  position: absolute;
+  bottom: 20px;
+  left: 540px;
+  border-radius: 30px;
+  background-color:#c9a55cd1;
+  height: 35px;
+}
+.makers-cards button:hover{
+  color: rgb(98, 86, 40) !important;
+}
+
+  .makers-cards>div::after{
+    z-index: 0;
+    border: #b6924b14 2px solid;
+  background-color: #b8975444;
+  width: 100%;
+  height: 100%;
+}
+.makers-cards>div:hover::after{
+  height: 0;
+}
+/* ///////////////////////////////////// */
+
+.comments{
+  background-image: url(../photos/BG\ comments.png);
+  margin-bottom: 100px;
+}
+.comments-cards
+{
+  width: 70%;
+}
+.comments-cards>div{
+  position: relative;
+  background-color: rgba(212, 202, 202, 0.477);
+  float: left;
+  width: 35%;
+  border-radius: 50px;
+}
+.comment2{
+  margin-left: 220px;
+}
+.comment1{
+  margin-left: 40px;
+}
+.comments .img1{
+  background: url(../photos/commentimg1.jpg) no-repeat;
+  background-size: cover;
+}
+.comments .img2{
+  background: url(../photos/commentimg2.jpg) no-repeat;
+  background-size: cover;
+}
+.comments-img{
+  background-color: aqua;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.comments-cards h3{
+  color: #e4d0ae;
+  font: normal 16px "Gveret Levin";
+  position: absolute;
+  top: 30px;
+  left: 105px;
+}
+.comments-cards p{
+  width: 250px;
+  margin: 10px auto;
+}
+.comments-cards i{
+  color: rgb(228, 194, 55);
+  margin: 20px auto 0 ;
+  padding: 3px;
+}
+/* //////////////////////////////// */
+ .contact{
+  background: url(../photos/BG\ footerr.png) no-repeat;
+  background-size: cover;
+  height: 620px;
+ }
+ .letsCreatTogether{
+  height: 150px;
+  background-color: #c9a55cdb;
+ }
+ .letsCreatTogether>div{
+  float: left;
+ }
+ .letsCreatTogether h2{
+  margin: -45px 0 10 150px;
+ }
+ .letsCreatTogether p , .footer-logo p{
+  color: rgb(98, 86, 40);
+  width: 450px;
+  margin-left: 105px;
+ }
+ .letsCreatTogether .rightSide{
+  text-align: center;
+  margin: 50 0 10px 300px ;
+ }
+  .letsCreatTogether .rightSide input{
+    padding:  0px 25px;
+    width: 300px;
+    height: 50px;
+    border-radius: 25px 0 0 25px;
+  }
+ .letsCreatTogether .rightSide button{
+  padding:  0px 15px;
+  height: 50px;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+ }  
+.letsCreatTogether .rightSide p{
+  margin: 10px auto;
+  font-size: 13px;
+} 
+
+.footer{
+  position: relative;
+  height: 470px;
+  background-color: rgba(0, 0,0, 0.7);
+}
+
+.footer-logo{
+  position: absolute;
+  top: 90px;
+  left: 130px;
+  height: 250px;
+}
+.footer div {
+float: left;
+margin: 20px 0px;
+}
+.footer-logo p{
+  color: #c9a55c96;
+  width: 270px;
+  margin: 10px 10px 40px 30px;
+}
+
+.footer-icons{
+  position: absolute;
+  top: 210;
+  left: 90px;
+}
+.footer-icons i{
+  cursor: pointer;
+  color: #c9a45c;
+  font-size: 25px;
+  margin-right: 25px;
+  transition: 0.3s;
+}
+.footer-icons i:hover{
+  color: #fff5e1;
+}
+.footer-right{
+  right: 120px;
+  top: 80px;
+  position: absolute;
+}
+.footer-right div{
+  margin-right: 90px;
+}
+.footer-right h3{
+  color: #c9a45c;
+  font-weight: bold;
+}
+.footer-right li , .WorkHours p{
+  list-style: none;
+  font: normal 15px/30px sansation ;
+  transition: 0.3s;
+}
+.footer-right ul{
+  padding-left:10px;
+}
+.footer-right a , .WorkHours p{
+  color: #907d59;
+  transition: 0.3s;
+}
+.footer-right a:hover{
+  color: #c9a45c;
+}
+.footer-right li:hover{
+  transform: translateY(-2px);
+}
+.WorkHours-time {
+font-weight: bold;
+}
+.WorkHours button{
+  margin-left: 0px;
+  width: 200px;
+}
+.footer .lastSection{
+  margin-top: 28%;
+  font: normal 16px 'Times New Roman';
+  color: #9e988e;
+}
+.footer .underline{
+  height: 3px;
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  background-color: #b6924b25;
+}
